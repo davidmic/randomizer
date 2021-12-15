@@ -8,7 +8,8 @@ void main() {
 }
 
 final randomizerNotifier =
-    ChangeNotifierProvider((ref) => RandomizerChangeNotifier());
+    StateNotifierProvider<RandomizerStateNotifier, RandomizerState>(
+        (ref) => RandomizerStateNotifier());
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
